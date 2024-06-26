@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/RubricaFragment"
+    >
+
+    <fragment
+        android:id="@+id/RubricaFragment"
+        android:name="com.example.rubrica.view.RubricaFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/rubrica_fragment">
+        <action
+            android:id="@+id/action_go_to_edit_fragment"
+            app:destination="@id/EditFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/EditFragment"
+        android:name="com.example.rubrica.view.EditFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/edit_fragment">
+        <action
+            android:id="@+id/action_go_to_rubrica_fragment"
+            app:destination="@id/RubricaFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            />
+
+    </fragment>
+</navigation>

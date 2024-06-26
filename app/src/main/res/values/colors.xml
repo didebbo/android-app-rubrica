@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Primary Colors -->
+    <color name="clear">#00FFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FFFF0000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="blue">#FF0000FF</color>
+
+    <!-- Buttons Colors -->
+    <color name="button_call">#FF008000</color>
+    <color name="button_edit">#155389</color>
+    <color name="button_save">#155389</color>
+    <color name="button_delete">#A42525</color>
+
+
+    <!-- Avatar Colors -->
+    <color name="avatar_icon_default">#959090</color>
+    <color name="avatar_icon_1">#EF5350</color>
+    <color name="avatar_icon_2">#26A69A</color>
+    <color name="avatar_icon_3">#FFA726</color>
+</resources>

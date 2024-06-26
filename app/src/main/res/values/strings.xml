@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Rubrica</string>
+    <string name="first_fragment_label">Rubricà</string>
+    <string name="second_fragment_label">Aggiungi Contatto</string>
+    <string name="undefinedAvatarName">--</string>
+    <string name="undefinedName">Undefined Name</string>
+    <string name="undefinedNumber">Undefined Number</string>
+    <string name="call_number">Call Number</string>
+    <string name="edit_number">Edit Contact</string>
+    <string name="name_hint_label">Name:</string>
+    <string name="surname_hint_label">Surname:</string>
+    <string name="number_hint_label">Number:</string>
+    <string name="no_results">Nessun Risultato</string>
+</resources>

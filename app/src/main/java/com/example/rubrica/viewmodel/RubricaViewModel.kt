@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.rubrica.model.Contact
-import com.example.rubrica.view.EditFragment
 import java.util.UUID
 
 class RubricaViewModel(): ViewModel() {

@@ -3,17 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/RubricaFragment"
+    app:startDestination="@id/home_fragment"
     >
 
     <fragment
-        android:id="@+id/RubricaFragment"
-        android:name="com.example.rubrica.view.RubricaFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/rubrica_fragment">
+        android:id="@+id/home_fragment"
+        android:name="com.example.rubrica.view.HomeFragment"
+        android:label="@string/home_fragment_label"
+        tools:layout="@layout/home_fragment">
         <action
-            android:id="@+id/action_go_to_edit_fragment"
-            app:destination="@id/EditFragment"
+            android:id="@+id/home_fragment_to_add_fragment"
+            app:destination="@id/add_fragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/slide_out"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"
+            />
+        <action
+            android:id="@+id/home_fragment_to_edit_fragment"
+            app:destination="@id/edit_fragment"
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/slide_out"
             app:popEnterAnim="@android:anim/slide_in_left"
@@ -23,16 +31,28 @@
     </fragment>
 
     <fragment
-        android:id="@+id/EditFragment"
-        android:name="com.example.rubrica.view.EditFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/edit_fragment">
+        android:id="@+id/add_fragment"
+        android:name="com.example.rubrica.view.FormFragment"
+        android:label="@string/add_fragment_label"
+        tools:layout="@layout/form_fragment">
         <action
-            android:id="@+id/action_go_to_rubrica_fragment"
-            app:destination="@id/RubricaFragment"
+            android:id="@+id/add_fragment_to_home_fragment"
+            app:destination="@id/home_fragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right"
             />
+    </fragment>
 
+    <fragment
+        android:id="@+id/edit_fragment"
+        android:name="com.example.rubrica.view.FormFragment"
+        android:label="@string/edit_fragment_label"
+        tools:layout="@layout/form_fragment">
+        <action
+            android:id="@+id/edit_fragment_to_home_fragment"
+            app:destination="@id/home_fragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            />
     </fragment>
 </navigation>

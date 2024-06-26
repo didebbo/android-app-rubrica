@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Rubrica</string>
-    <string name="first_fragment_label">Rubricà</string>
-    <string name="second_fragment_label">Aggiungi Contatto</string>
+    <string name="home_fragment_label">Rubricà</string>
+    <string name="add_fragment_label">Aggiungi Contatto</string>
+    <string name="edit_fragment_label">Modifica Contatto</string>
     <string name="undefinedAvatarName">--</string>
     <string name="undefinedName">Undefined Name</string>
     <string name="undefinedNumber">Undefined Number</string>

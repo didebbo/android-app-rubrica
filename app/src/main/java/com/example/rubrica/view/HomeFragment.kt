@@ -10,13 +10,13 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.rubrica.R
-import com.example.rubrica.databinding.RubricaFragmentBinding
+import com.example.rubrica.databinding.HomeFragmentBinding
 import com.example.rubrica.viewmodel.RubricaViewModel
 import com.google.android.material.snackbar.Snackbar
 
-class RubricaFragment : Fragment() {
+class HomeFragment : Fragment() {
 
-    private var _binding: RubricaFragmentBinding? = null
+    private var _binding: HomeFragmentBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var navController: NavController
@@ -27,7 +27,7 @@ class RubricaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = RubricaFragmentBinding.inflate(inflater, container, false)
+        _binding = HomeFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -43,7 +43,7 @@ class RubricaFragment : Fragment() {
             },
             onEditContact = {
                 viewModel.selectContact(it)
-                navController.navigate(R.id.action_go_to_edit_fragment)
+                navController.navigate(R.id.home_fragment_to_edit_fragment)
             },
         )
 
@@ -58,7 +58,7 @@ class RubricaFragment : Fragment() {
 
         binding.fab.setOnClickListener {
             viewModel.unSelectContact()
-            navController.navigate(R.id.action_go_to_edit_fragment)
+            navController.navigate(R.id.home_fragment_to_add_fragment)
         }
     }
 

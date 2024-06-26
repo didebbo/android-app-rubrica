@@ -12,12 +12,12 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.example.rubrica.R
-import com.example.rubrica.databinding.EditFragmentBinding
+import com.example.rubrica.databinding.FormFragmentBinding
 import com.example.rubrica.model.Contact
 import com.example.rubrica.viewmodel.RubricaViewModel
 import com.google.android.material.snackbar.Snackbar
 
-class EditFragment : Fragment() {
+class FormFragment : Fragment() {
 
     internal data class Fields(val name: String, val surname: String, val number: String, val color: Int) {
 
@@ -37,7 +37,7 @@ class EditFragment : Fragment() {
         }
     }
 
-    private var _binding: EditFragmentBinding? = null
+    private var _binding: FormFragmentBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var view: View
@@ -52,7 +52,7 @@ class EditFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = EditFragmentBinding.inflate(inflater, container, false)
+        _binding = FormFragmentBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -141,16 +141,16 @@ class EditFragment : Fragment() {
         navController.navigateUp()
     }
 
-    private fun getFields(): EditFragment.Fields {
+    private fun getFields(): FormFragment.Fields {
         val name = binding.nameInputText.text.toString()
         val surname = binding.surnameInputText.text.toString()
         val number = binding.numberInputText.text.toString()
         if(iconColorRes == null) iconColorRes = getRandomAvatarColor()
         val color: Int = iconColorRes ?: getRandomAvatarColor()
-        return  EditFragment.Fields(name,surname,number, color)
+        return  FormFragment.Fields(name,surname,number, color)
     }
 
-    private fun createContactFrom(fields: EditFragment.Fields): Contact =  Contact(name = fields.name, surname = fields.surname, number = fields.number, fields.color)
+    private fun createContactFrom(fields: FormFragment.Fields): Contact =  Contact(name = fields.name, surname = fields.surname, number = fields.number, fields.color)
 
     private fun getRandomAvatarColor(): Int  {
         val colors: List<Int> = listOf(
